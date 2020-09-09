@@ -1,0 +1,646 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+/* ===================================common parameters=========================================== */
+
+:root {
+  --primary-color: #ffc966;
+  --primary-color-dark: #fcbe4a;
+  --para-font: 14px;
+  --para-color: #838383;
+  --heading-primary: 25px;
+  --heading-secondary: 16px;
+  --background-shade1: #f3f3f3;
+  --background-shade2: #e7e7e7;
+}
+
+/* ======================================toggler button starts here======================================= */
+
+.toggler {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ===========================================nav starts here============================================= */
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 10px 0 0 10px;
+  color: var(--primary-color);
+}
+
+.nav-link {
+  color: #000;
+  padding: 0px 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--heading-secondary);
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link:active {
+  color: var(--primary-color);
+}
+
+/* ==========================================slider starts here===================================== */
+
+.carousel-item {
+  position: relative;
+  height: 600px;
+}
+
+.carousel-content {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-content h6 {
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.carousel-content h3 {
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.price {
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.carousel-content p {
+  margin: 50px 0px;
+  text-transform: capitalize;
+  color: var(--para-color);
+  font-size: var(--para-font);
+  font-weight: 700;
+}
+
+.explore-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #000;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translate(3px, 3px);
+  transition: 0.5s;
+}
+
+.explore-btn:hover {
+  text-decoration: none;
+  transform: translate(0px);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+.carousel img {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-control-prev-icon {
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-control-next-icon {
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+}
+
+/* =======================================products starts from here======================================== */
+
+.product-color-first {
+  background-color: var(--background-shade1);
+}
+
+.product {
+  text-align: center;
+  border: none;
+}
+
+.product-img-top {
+  margin: 0px auto;
+  width: 60%;
+  height: 200px;
+  font-weight: 700;
+}
+
+.product-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--heading-secondary);
+}
+
+.product-text {
+  text-transform: capitalize;
+  color: var(--para-color);
+  font-size: var(--para-font);
+  font-weight: 700;
+}
+
+
+.product-color-second {
+  background-color: var(--background-shade2);
+}
+
+.products-table h6 {
+  padding: 15px;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  width: 40%;
+  margin: 0px auto;
+  font-weight: 700;
+}
+
+.products-table {
+  margin: 40px 0px;
+}
+
+.products-table h1 {
+  border-width: 0px 2px 2px 2px;
+  border-style: solid;
+  border-color: #000;
+  width: 40%;
+  margin: 0px auto;
+  font-weight: 700;
+}
+
+/* ======================================featured products starts here==================================== */
+
+.featured-products {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.featured-products p {
+  text-transform: uppercase;
+  color: var(--para-color);
+  font-size: var(--para-font);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+.featured-products h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.featured-products h5 {
+  font-size: var(--heading-secondary);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.outer-line {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 12%;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+.down-icon {
+  font-size: var(--heading-secondary);
+  opacity: 0.2;
+}
+
+.featured-products-img {
+  width: 180px;
+  height: 200px;
+  margin: 20px 0px;
+}
+
+.price-text {
+  font-weight: 700;
+}
+
+/*=================================== section starts from here============================================= */
+.section {
+  height: auto;
+  position: relative;
+}
+
+.section img {
+  width: 100%;
+  height: 600px;
+}
+
+.section-text {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  width: 30%;
+  height: 80%;
+  text-align: center;
+  padding: 20px 10px;
+  border: 5px solid white;
+}
+
+.logo-img {
+  background: url("../Images/Logo.png") no-repeat;
+  width: 44px;
+  height: 49px;
+  margin: 0px auto;
+}
+
+.section-text h6 {
+  font-size: var(--para-font);
+  font-weight: 700;
+  margin: 20px 0px;
+  letter-spacing: 2.5px;
+}
+
+.section-text h3 {
+  font-size: var(--heading-secondary);
+  font-weight: 700;
+  border: 2px solid #000;
+  margin: 25px auto;
+  padding: 5px 10px;
+  max-width: 80%;
+}
+
+.section-text p {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--para-color);
+  font-size: var(--para-font);
+}
+
+/* =====================================bottom section starts here======================================= */
+.bottom-1 {
+  box-sizing: border-box;
+  background-color: rgb(243, 243, 243);
+}
+
+.bottom-section-1 {
+  text-align: center;
+  height: 600px;
+  border: 5px solid rgb(231, 231, 231);
+  width: 90%;
+  margin: 30px auto;
+}
+
+.bottom-section-1 h6 {
+  margin: 20px 0px;
+}
+
+.bottom-section-1 h4 {
+  margin: 10px 0px;
+}
+
+.bottom-section-1 p {
+  margin: 20px 0px;
+  font-size: var(--para-font);
+  opacity: 0.5;
+}
+
+.bottom-section-1 img {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+/* ===========================================bottom-2===================================================== */
+
+.bottom-2 {
+  box-sizing: border-box;
+  background-color: rgb(221, 221, 221);
+}
+
+.bottom-section-2 {
+  text-align: center;
+  height: 600px;
+  border: 5px solid rgb(255, 254, 254);
+  width: 90%;
+  margin: 30px auto;
+}
+
+.bottom-section-2 h6 {
+  margin: 20px 0px;
+}
+
+.bottom-section-2 h4 {
+  margin: 10px 0px;
+}
+
+.bottom-section-2 p {
+  margin: 20px 0px;
+  font-size: var(--para-font);
+  color: var(--para-color);
+}
+
+.bottom-section-2 img {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+/* ====================================footer starts here============================================= */
+footer {
+  margin: 50px 0px;
+}
+
+.about-logo {
+  background: url("../Images/Logo.png") no-repeat;
+  width: 44px;
+  height: 49px;
+}
+
+.about ul li {
+  list-style: none;
+  margin-top: 10px;
+  font-size: var(--heading-secondary);
+  opacity: 0.8;
+}
+
+.about ul li:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.vertical-line {
+  width: 5px;
+  height: 20px;
+  background-color: var(--primary-color);
+}
+
+.list {
+  list-style: none;
+  margin-top: 10px;
+  font-size: var(--heading-secondary);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.list:hover {
+  color: var(--primary-color);
+}
+
+/* ===================================subcribe button starts here========================================= */
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 0px;
+}
+
+i {
+  margin: 0px 8px;
+  color: var(--para-color);
+  cursor: pointer;
+}
+
+i:hover {
+  transform: scale(1.3);
+  color: var(--primary-color);
+}
+
+.email {
+  position: relative;
+}
+
+label {
+  text-align: center;
+}
+
+input[type="email"] {
+  margin: 0px 35px;
+  padding: 15px 0px;
+  width: 25rem;
+  height: 25px;
+  opacity: 0.5;
+}
+
+.submit {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  border: none;
+}
+
+/* =====================================END IS HERE================================== */
+
+.end p {
+  margin: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.heart {
+  color: 	#FF0000;
+}
+
+/* ========================================media queries=========================================== */
+
+
+
+
+@media screen and (max-width: 996px) {
+  /* ==========================================slider starts here===================================== */
+
+  .carousel-content {
+    left: 50%;
+    text-align: center;
+    width: 80%;
+  }
+
+  .carousel img {
+    display: none;
+  }
+
+  /* ===================================subcribe button starts here========================================= */
+
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .media {
+    margin: 20px 0px;
+  }
+
+  /* ===========================================footer starts here======================================== */
+
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* ===========================================nav starts here============================================= */
+  .container {
+    max-width: 100%;
+    margin: 0px;
+  }
+
+  .nav-link {
+    padding: 20px 30px;
+    text-align: center;
+    font-size: var(--heading-secondary);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* ====================================== section starts from here=================================  */
+
+  .section-text {
+    width: 80%;
+  }
+
+  /* ===================================subcribe button starts here========================================= */
+
+  input[type="email"] {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* ===================================subcribe button starts here========================================= */
+  .email {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submit {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* ============================================toggler starts here==================================== */
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -9px);
+    transform: rotate(45deg) translate(-7px, -9px);
+  }
+
+  /* ===========================================nav starts here============================================= */
+
+  .navbar-brand img {
+    width: 90px;
+    height: 50px;
+  }
+
+  /* =======================================products starts from here======================================== */
+  .products-table h6 {
+    font-size: 3vw;
+  }
+
+  .display-3 {
+    font-size: 16vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  /* ======================================navbar starts here============================================= */
+  .navbar-brand {
+    margin-right: 0px;
+  }
+
+  .navbar-brand img {
+    width: 75px;
+    height: 40px;
+  }
+
+  /* ==========================================bottom section starts here================================= */
+
+  .bottom-section-1 img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .bottom-section-2 img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* ===================================subcribe button starts here========================================= */
+
+  input[type="email"] {
+    width: 15rem;
+  }
+}
